@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:G26W12WPFMenu"
         mc:Ignorable="d"
         Title="배경색 지정" Height="350" Width="525">
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="OnFileOpen"/>
+    </Window.CommandBindings>
     <DockPanel>
         <Menu DockPanel.Dock="Top" IsMainMenu="True">
             <MenuItem Header="파일(_F)">
@@ -13,6 +16,8 @@
                     <MenuItem Header="프로젝트(_P)"/>
                     <MenuItem Header="파일(_F)"/>
                 </MenuItem>
+                <MenuItem Header="열기(_O)..."
+                          Command="Open"/>
             </MenuItem>
             <MenuItem Header="배경색(_B)">
                 <MenuItem Header="빨간색(_R)"
